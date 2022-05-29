@@ -51,15 +51,11 @@ export default function Home() {
           
           {
             users && users != 0? 
-              users.map((item) => {
+              users.map((item, index) => {
                 return(
-                
-
-                    
-                  <ItemList emoji= { item.symbol } title= { item.title }/>
-                 
-            
-        
+    
+                  <ItemList key={index} emoji= { item.symbol } title= { item.title }/>
+       
                 )
               })
               :
